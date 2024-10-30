@@ -40,27 +40,22 @@
 			<string>UIInterfaceOrientationPortraitUpsideDown</string>
 			<string>UIInterfaceOrientationLandscapeLeft</string>
 			<string>UIInterfaceOrientationLandscapeRight</string>
-
-			
 		</array>
-		
 		<key>CADisableMinimumFrameDurationOnPhone</key>
 		<true/>
 		<key>UIApplicationSupportsIndirectInputEvents</key>
 		<true/>
 		<key>UIStatusBarHidden</key>
-		<false/> 
-
+		<false/>
 		<key>CFBundleLocalizations</key>
-	<array>
-    <string>en</string>
-    <string>ar</string>
-	</array>
-
-	<key>LSApplicationQueriesSchemes</key>
-<array>
-  <string>sms</string>
-  <string>tel</string>
-</array>
+		<array>
+			<string>en</string>
+			<string>ar</string>
+		</array>
+		<key>LSApplicationQueriesSchemes</key>
+		<array>
+			<string>sms</string>
+			<string>tel</string>
+		</array>
 	</dict>
 </plist>

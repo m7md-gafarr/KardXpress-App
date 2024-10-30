@@ -9,7 +9,6 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'generated/l10n.dart';
-import 'dart:ui' as ui;
 
 bool? _seen;
 
@@ -49,8 +48,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<LanguageProvider>(
       builder: (context, value, child) => MaterialApp(
-        // locale: Locale(value.language),
-        locale: Locale(ui.window.locale.languageCode),
+        locale: Locale(value.language),
+
         localizationsDelegates: const [
           S.delegate,
           GlobalMaterialLocalizations.delegate,
@@ -61,7 +60,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         onGenerateRoute: appRouter.generate_route,
         initialRoute: _seen == true ? HomeScreen : IntroScreen,
-        // home: const Intro_Screen(),
+        // home: Intro_Screen(),
       ),
     );
   }

@@ -19,7 +19,7 @@ class CompanyWidget extends StatelessWidget {
       onTap: onTap,
       child: Container(
         width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.width / 3,
+        height: MediaQuery.of(context).size.width / 2.7,
         decoration: BoxDecoration(
           color: SubbackColor,
           borderRadius: const BorderRadius.all(Radius.circular(15)),

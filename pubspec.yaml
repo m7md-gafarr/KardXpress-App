@@ -30,25 +30,20 @@ environment:
 dependencies:
   bloc: ^8.1.4
   collection: ^1.18.0
-  crop_image: ^1.0.13
   cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.6
   flutter_native_splash: ^2.4.1
   flutter_svg: ^2.0.10+1
-  google_ml_kit: ^0.19.0
-  hive: ^2.2.3
-  icons_plus: ^5.0.0
   iconsax: ^0.0.8
   image_cropper: ^8.0.2
   image_picker: ^1.1.2
   intl_utils: ^2.8.7
   provider: ^6.1.2
-  share_plus: ^10.1.1
   shared_preferences: ^2.3.2
-  smooth_page_indicator: ^1.2.0+3
   url_launcher: ^6.3.1
+  google_mlkit_text_recognition: ^0.14.0
 
 dev_dependencies:
   flutter_lints: ^5.0.0
@@ -75,6 +70,10 @@ flutter_native_splash:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
+
+
+
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter packages.
@@ -87,7 +86,6 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/image/intro/
     - assets/image/Companys/
     - assets/logo/
   # An image asset can refer to one or more resolution-specific "variants", see
