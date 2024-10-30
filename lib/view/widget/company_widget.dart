@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+
+import '../../constant/constant.dart';
 
 class CompanyWidget extends StatelessWidget {
-  const CompanyWidget({super.key, required this.icon, required this.onTap});
-  final IconData? icon;
+  const CompanyWidget(
+      {super.key, required this.Path, required this.onTap, required this.text});
+  final String Path;
   final void Function()? onTap;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -13,14 +18,30 @@ class CompanyWidget extends StatelessWidget {
       highlightColor: Colors.transparent,
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.all(10),
-        height: MediaQuery.of(context).size.width / 2 - 50,
-        width: MediaQuery.of(context).size.width / 2 - 50,
-        decoration: const BoxDecoration(
-          color: Colors.black12,
-          borderRadius: BorderRadius.all(Radius.circular(15)),
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.width / 3,
+        decoration: BoxDecoration(
+          color: SubbackColor,
+          borderRadius: const BorderRadius.all(Radius.circular(15)),
         ),
-        child: Icon(icon),
+        padding: const EdgeInsets.all(15),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              text,
+              style: TextStyle(
+                fontFamily: SubFont,
+                fontSize: 22,
+                color: TextColor,
+              ),
+            ),
+            SvgPicture.asset(
+              Path,
+              width: 100,
+            ),
+          ],
+        ),
       ),
     );
   }

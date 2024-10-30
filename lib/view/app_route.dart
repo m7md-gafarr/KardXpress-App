@@ -8,7 +8,7 @@ class AppRouter {
   Route generate_route(RouteSettings settings) {
     switch (settings.name) {
       case IntroScreen:
-        return MaterialPageRoute(builder: (context) => const Intro_Screen());
+        return MaterialPageRoute(builder: (context) => Intro_Screen());
       case HomeScreen:
         return MaterialPageRoute(builder: (context) => const Home_Screen());
 

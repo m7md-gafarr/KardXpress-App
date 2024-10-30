@@ -15,8 +15,13 @@
     "home_3_2_2": "تاكد من اختيار مزود الخدمة الصحيح لكارت الشحن",
     "home_3_3": "اغلاق",
     "home_4_1": "دايما بسطنهالك",
-    "home_4_2": "شركات المحمول فى",
+    "home_5": "من فضلك اختر الدولة لعرض الشركات المتاحة",
+    "home_6": "من هنا",
+    "cropImage": "قص رقم الكارت فقط",
+     
+    
 
+    
     "setting_1": "لغة التطبيق",
     "setting_2": "الثيم",
     "setting_3": "شارك التطبيق",
@@ -25,15 +30,66 @@
     "setting_6": "مركز المساعدة ,سياسة الخصوصية , معلومات التطبيق",
     "setting_7": "غامق",
     "setting_8": "فاتح",
-    "setting_9": "تابعنى على",
+    "setting_9": "تابعنى على ",
+    "setting_10": "البلد",
+     "setting_11":"لم يتم تحديد دوله بعد",
+    
+
     
     "Vodafone": "فودافون",
-    "Orange": "اورانج",
+    "Orange": "أورنج",
     "We": "وى",
-    "Etisalat": "اتصالات", 
+    "Etisalat": "اتصالات",
+    "STC": "إس تي سي",
+    "Mobily": "موبايلي",
+    "Zain": "زين",
+    "Ooredoo": "أوريدو",
+    "Du": "دو",
+    "Umniah": "أمنية",
+    "Asiacell": "آسياسيل",
+    "Korek": "كورك تيليكوم",
+    "Jawwal": "جوال",
+    "Omantel": "عمانتل",
+    "MarocTelecom": "اتصالات المغرب",
+    "Inwi": "إنوي",
+    "Djezzy": "جيزي",
+    "Mobilis": "موبيليس",
+    "Libyana": "ليبيانا",
+    "Almadar": "المدار",
+    "TunisieTelecom": "اتصالات تونس",
+    "Mattel": "ماتيل",
+    "Moov": "مووف",
+    "MTN": "إم تي إن",
+    "Batelco": "بتلكو",
+    "Viva": "فيفا",
+    "Alfa": "ألفا",
+    "Touch": "تاتش",
+    "Sudani": "سوداني",
+    "Nawras": "نورس",
+    
+
+
     "BottomnavBar_1":"الرئسية",
     "BottomnavBar_2":"اخرى",
-    "BottomnavBar_3":"القائمة"
+    "BottomnavBar_3":"القائمة",
 
+    "countryEG": "مصر",
+    "countrySA": "السعودية",
+    "countryAE": "الإمارات",
+    "countryJO": "الأردن",
+    "countryIQ": "العراق",
+    "countryPS": "فلسطين",
+    "countryKW": "الكويت",
+    "countryOM": "عمان",
+    "countryQA": "قطر",
+    "countryBH": "البحرين",
+    "countryLY": "ليبيا",
+    "countryTN": "تونس",
+    "countryDZ": "الجزائر",
+    "countryMA": "المغرب",
+    "countrySD": "السودان",
+    "countryMR": "موريتانيا"
+     
+    ,"Search_hint":"البحث"
 
 }

@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:kardxpress_app/main.dart';
-import 'package:kardxpress_app/view/approute.dart';
+import 'package:kardxpress_app/view/app_route.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {

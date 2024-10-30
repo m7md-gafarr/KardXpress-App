@@ -210,11 +210,31 @@ class S {
     );
   }
 
-  /// `mobile companies in`
-  String get home_4_2 {
+  /// `Please select a country to display available companies`
+  String get home_5 {
     return Intl.message(
-      'mobile companies in',
-      name: 'home_4_2',
+      'Please select a country to display available companies',
+      name: 'home_5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `From Here`
+  String get home_6 {
+    return Intl.message(
+      'From Here',
+      name: 'home_6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cut card number only`
+  String get cropImage {
+    return Intl.message(
+      'Cut card number only',
+      name: 'cropImage',
       desc: '',
       args: [],
     );
@@ -310,6 +330,26 @@ class S {
     );
   }
 
+  /// `Country`
+  String get setting_10 {
+    return Intl.message(
+      'Country',
+      name: 'setting_10',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No country has been selected yet`
+  String get setting_11 {
+    return Intl.message(
+      'No country has been selected yet',
+      name: 'setting_11',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Vodafone`
   String get Vodafone {
     return Intl.message(
@@ -350,6 +390,266 @@ class S {
     );
   }
 
+  /// `STC`
+  String get STC {
+    return Intl.message(
+      'STC',
+      name: 'STC',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mobily`
+  String get Mobily {
+    return Intl.message(
+      'Mobily',
+      name: 'Mobily',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Zain`
+  String get Zain {
+    return Intl.message(
+      'Zain',
+      name: 'Zain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ooredoo`
+  String get Ooredoo {
+    return Intl.message(
+      'Ooredoo',
+      name: 'Ooredoo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Du`
+  String get Du {
+    return Intl.message(
+      'Du',
+      name: 'Du',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Umniah`
+  String get Umniah {
+    return Intl.message(
+      'Umniah',
+      name: 'Umniah',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Asiacell`
+  String get Asiacell {
+    return Intl.message(
+      'Asiacell',
+      name: 'Asiacell',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Korek Telecom`
+  String get Korek {
+    return Intl.message(
+      'Korek Telecom',
+      name: 'Korek',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Jawwal`
+  String get Jawwal {
+    return Intl.message(
+      'Jawwal',
+      name: 'Jawwal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Omantel`
+  String get Omantel {
+    return Intl.message(
+      'Omantel',
+      name: 'Omantel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Morocco Telecom`
+  String get MarocTelecom {
+    return Intl.message(
+      'Morocco Telecom',
+      name: 'MarocTelecom',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Inwi`
+  String get Inwi {
+    return Intl.message(
+      'Inwi',
+      name: 'Inwi',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Djezzy`
+  String get Djezzy {
+    return Intl.message(
+      'Djezzy',
+      name: 'Djezzy',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mobilis`
+  String get Mobilis {
+    return Intl.message(
+      'Mobilis',
+      name: 'Mobilis',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Libyana`
+  String get Libyana {
+    return Intl.message(
+      'Libyana',
+      name: 'Libyana',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Almadar`
+  String get Almadar {
+    return Intl.message(
+      'Almadar',
+      name: 'Almadar',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tunisia Telecom`
+  String get TunisieTelecom {
+    return Intl.message(
+      'Tunisia Telecom',
+      name: 'TunisieTelecom',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mattel`
+  String get Mattel {
+    return Intl.message(
+      'Mattel',
+      name: 'Mattel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Moov`
+  String get Moov {
+    return Intl.message(
+      'Moov',
+      name: 'Moov',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `MTN`
+  String get MTN {
+    return Intl.message(
+      'MTN',
+      name: 'MTN',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Batelco`
+  String get Batelco {
+    return Intl.message(
+      'Batelco',
+      name: 'Batelco',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Viva`
+  String get Viva {
+    return Intl.message(
+      'Viva',
+      name: 'Viva',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Alfa`
+  String get Alfa {
+    return Intl.message(
+      'Alfa',
+      name: 'Alfa',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Touch`
+  String get Touch {
+    return Intl.message(
+      'Touch',
+      name: 'Touch',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sudani`
+  String get Sudani {
+    return Intl.message(
+      'Sudani',
+      name: 'Sudani',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Nawras`
+  String get Nawras {
+    return Intl.message(
+      'Nawras',
+      name: 'Nawras',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Home`
   String get BottomnavBar_1 {
     return Intl.message(
@@ -375,6 +675,176 @@ class S {
     return Intl.message(
       'Menu',
       name: 'BottomnavBar_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Egypt`
+  String get countryEG {
+    return Intl.message(
+      'Egypt',
+      name: 'countryEG',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Saudi Arabia`
+  String get countrySA {
+    return Intl.message(
+      'Saudi Arabia',
+      name: 'countrySA',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `United Arab Emirates`
+  String get countryAE {
+    return Intl.message(
+      'United Arab Emirates',
+      name: 'countryAE',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Jordan`
+  String get countryJO {
+    return Intl.message(
+      'Jordan',
+      name: 'countryJO',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Iraq`
+  String get countryIQ {
+    return Intl.message(
+      'Iraq',
+      name: 'countryIQ',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Palestine`
+  String get countryPS {
+    return Intl.message(
+      'Palestine',
+      name: 'countryPS',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Kuwait`
+  String get countryKW {
+    return Intl.message(
+      'Kuwait',
+      name: 'countryKW',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Oman`
+  String get countryOM {
+    return Intl.message(
+      'Oman',
+      name: 'countryOM',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Qatar`
+  String get countryQA {
+    return Intl.message(
+      'Qatar',
+      name: 'countryQA',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bahrain`
+  String get countryBH {
+    return Intl.message(
+      'Bahrain',
+      name: 'countryBH',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Libya`
+  String get countryLY {
+    return Intl.message(
+      'Libya',
+      name: 'countryLY',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tunisia`
+  String get countryTN {
+    return Intl.message(
+      'Tunisia',
+      name: 'countryTN',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Algeria`
+  String get countryDZ {
+    return Intl.message(
+      'Algeria',
+      name: 'countryDZ',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Morocco`
+  String get countryMA {
+    return Intl.message(
+      'Morocco',
+      name: 'countryMA',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sudan`
+  String get countrySD {
+    return Intl.message(
+      'Sudan',
+      name: 'countrySD',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mauritania`
+  String get countryMR {
+    return Intl.message(
+      'Mauritania',
+      name: 'countryMR',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search`
+  String get Search_hint {
+    return Intl.message(
+      'Search',
+      name: 'Search_hint',
       desc: '',
       args: [],
     );

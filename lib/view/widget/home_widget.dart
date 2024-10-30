@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:kardxpress_app/constant/constant.dart';
 import 'package:kardxpress_app/generated/l10n.dart';
 import 'package:kardxpress_app/model/companys_model.dart';
+
 import 'package:kardxpress_app/state_managment/bloc/OCRCubit/ocr_cubit.dart';
 
-class HomeWidget extends StatelessWidget {
-  const HomeWidget({super.key});
+import 'package:kardxpress_app/view/widget/Company_widget.dart';
 
+class HomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -28,7 +28,7 @@ class HomeWidget extends StatelessWidget {
                     S.of(context).name,
                     style: TextStyle(
                       fontFamily: PrimaryFont,
-                      fontSize: 22,
+                      fontSize: 23,
                       color: btnColor,
                     ),
                   ),
@@ -45,27 +45,11 @@ class HomeWidget extends StatelessWidget {
                     ),
                   ),
                 ),
-                Align(
-                  alignment:
-                      IsArabic() ? Alignment.centerRight : Alignment.centerLeft,
-                  child: Text(
-                    "${S.of(context).home_4_2} EG",
-                    style: TextStyle(
-                      fontFamily: SubFont,
-                      fontSize: 18,
-                      color: SubTextColor,
-                    ),
-                  ),
-                ),
                 Column(
                   children: CompanysModel.CompList(context).map((company) {
                     return Padding(
                       padding: const EdgeInsets.all(15.0),
-                      child: InkWell(
-                        focusColor: Colors.transparent,
-                        hoverColor: Colors.transparent,
-                        splashColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
+                      child: CompanyWidget(
                         onTap: () {
                           showDialog(
                             context: context,
@@ -82,9 +66,13 @@ class HomeWidget extends StatelessWidget {
                                 ListTile(
                                   onTap: () {
                                     context.read<OcrCubit>().GetNumber(
-                                        errorMessage: S.of(context).home_3_2_1,
-                                        Code: company.Code,
-                                        source: ImageSource.camera);
+                                          errorMessage:
+                                              S.of(context).home_3_2_1,
+                                          context: context,
+                                          Code: company.Code,
+                                          source: ImageSource.camera,
+                                          CardCount: company.CardCount,
+                                        );
                                     Navigator.pop(context);
                                   },
                                   leading: Icon(
@@ -103,9 +91,13 @@ class HomeWidget extends StatelessWidget {
                                 ListTile(
                                   onTap: () {
                                     context.read<OcrCubit>().GetNumber(
-                                        errorMessage: S.of(context).home_3_2_2,
-                                        Code: company.Code,
-                                        source: ImageSource.gallery);
+                                          context: context,
+                                          errorMessage:
+                                              S.of(context).home_3_2_2,
+                                          Code: company.Code,
+                                          source: ImageSource.gallery,
+                                          CardCount: company.CardCount,
+                                        );
                                     Navigator.pop(context);
                                   },
                                   leading: Icon(
@@ -125,125 +117,12 @@ class HomeWidget extends StatelessWidget {
                             ),
                           );
                         },
-                        child: Container(
-                          width: MediaQuery.of(context).size.width,
-                          decoration: BoxDecoration(
-                            color: SubbackColor,
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(15)),
-                          ),
-                          padding: const EdgeInsets.all(15),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                company.text,
-                                style: TextStyle(
-                                  fontFamily: SubFont,
-                                  fontSize: 22,
-                                  color: TextColor,
-                                ),
-                              ),
-                              SvgPicture.asset(
-                                company.Path,
-                                height:
-                                    MediaQuery.of(context).size.width / 2 - 100,
-                              ),
-                            ],
-                          ),
-                        ),
+                        text: company.text,
+                        Path: company.Path,
                       ),
                     );
                   }).toList(),
                 ),
-                // Expanded(
-                //   child: GridView.count(
-                //     physics: const BouncingScrollPhysics(),
-                //     crossAxisCount: 2,
-                //     children: CompanysModel.CompList(context).map((company) {
-                //       return Padding(
-                //         padding: const EdgeInsets.all(15.0),
-                //         child: InkWell(
-                //           focusColor: Colors.transparent,
-                //           hoverColor: Colors.transparent,
-                //           splashColor: Colors.transparent,
-                //           highlightColor: Colors.transparent,
-                //           onTap: () {
-                //             showDialog(
-                //               context: context,
-                //               builder: (context) => SimpleDialog(
-                //                 title: Text(
-                //                   S.of(context).home_2_1,
-                //                   style: TextStyle(
-                //                     fontFamily: SubFont,
-                //                     fontSize: 20,
-                //                     color: TextColor,
-                //                   ),
-                //                 ),
-                //                 children: [
-                //                   ListTile(
-                //                     onTap: () {
-                //                       context.read<OcrCubit>().GetNumber(
-                //                           errorMessage: S.of(context).home_3_2_1,
-                //                           Code: company.Code,
-                //                           source: ImageSource.camera);
-                //                       Navigator.pop(context);
-                //                     },
-                //                     leading: Icon(
-                //                       Iconsax.camera,
-                //                       color: btnColor,
-                //                     ),
-                //                     title: Text(
-                //                       S.of(context).home_2_2,
-                //                       style: TextStyle(
-                //                         fontFamily: SubFont,
-                //                         fontSize: 18,
-                //                         color: TextColor,
-                //                       ),
-                //                     ),
-                //                   ),
-                //                   ListTile(
-                //                     onTap: () {
-                //                       context.read<OcrCubit>().GetNumber(
-                //                           errorMessage: S.of(context).home_3_2_2,
-                //                           Code: company.Code,
-                //                           source: ImageSource.gallery);
-                //                       Navigator.pop(context);
-                //                     },
-                //                     leading: Icon(
-                //                       Iconsax.gallery,
-                //                       color: btnColor,
-                //                     ),
-                //                     title: Text(
-                //                       S.of(context).setting_5,
-                //                       style: TextStyle(
-                //                         fontFamily: SubFont,
-                //                         fontSize: 22,
-                //                         color: TextColor,
-                //                       ),
-                //                     ),
-                //                   ),
-                //                 ],
-                //               ),
-                //             );
-                //           },
-                //           child: Container(
-                //             decoration: BoxDecoration(
-                //               color: SubbackColor,
-                //               borderRadius:
-                //                   const BorderRadius.all(Radius.circular(15)),
-                //             ),
-                //             padding: const EdgeInsets.all(15),
-                //             child: SvgPicture.asset(
-                //               company.Path,
-                //               height: MediaQuery.of(context).size.width / 2 - 70,
-                //             ),
-                //           ),
-                //         ),
-                //       );
-                //     }).toList(),
-                //   ),
-                // ),
               ],
             ),
           ),

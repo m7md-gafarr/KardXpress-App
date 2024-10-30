@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kardxpress_app/constant/constant.dart';
-import 'package:kardxpress_app/generated/l10n.dart';
 import 'package:kardxpress_app/state_managment/bloc/OCRCubit/ocr_cubit.dart';
-import 'package:kardxpress_app/state_managment/provider/indexscreens.dart';
-import 'package:kardxpress_app/view/widget/bottonnavbar_widget.dart';
-import 'package:provider/provider.dart';
+import '../../generated/l10n.dart';
 import '../widget/home_widget.dart';
 
 class Home_Screen extends StatelessWidget {
@@ -38,30 +35,27 @@ class Home_Screen extends StatelessWidget {
               ),
               actions: [
                 OutlinedButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: Text(
-                      S.of(context).home_3_3,
-                      style: TextStyle(
-                        fontFamily: SubFont,
-                        fontSize: 18,
-                        color: TextColor,
-                      ),
-                    ))
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text(
+                    S.of(context).home_3_3,
+                    style: TextStyle(
+                      fontFamily: SubFont,
+                      fontSize: 18,
+                      color: TextColor,
+                    ),
+                  ),
+                )
               ],
             ),
           );
         }
       },
       child: Scaffold(
-          backgroundColor: backColor,
-          body: Consumer<Indexscreens>(
-            builder: (context, myType, child) {
-              return myType.Screens[context.read<Indexscreens>().index];
-            },
-          ),
-          bottomNavigationBar: const BottomNavbarWidget()),
+        backgroundColor: backColor,
+        body: HomeWidget(),
+      ),
     );
   }
 }

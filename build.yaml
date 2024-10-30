@@ -1,0 +1,6 @@
+# targets:
+#   $default:
+#     builders:
+#       intl_utils:generate:
+#         options:
+#           generated_file_path: lib/global/localization/

@@ -14,25 +14,36 @@ class OCRService {
     required Function(String) onTextDetected,
     required String Code,
     required ImageSource source,
+    required int CardCount,
+    required String toolbarTitle,
   }) async {
     final XFile? image = await _picker.pickImage(source: source);
-    if (image != null) _detectTextFromImage(image.path, onTextDetected, Code);
+    // if (image != null)
+    //   _detectTextFromImage(image.path, onTextDetected, Code, CardCount);
 
-    // if (image != null) {
-    //   File? croppedImage = await _cropImage(image.path);
-    //   if (croppedImage != null) {
-    //     await _detectTextFromImage(croppedImage.path, onTextDetected, Code);
-    //   }
-    // }
+    if (image != null) {
+      File? croppedImage = await _cropImage(image.path, toolbarTitle);
+      if (croppedImage != null) {
+        await _detectTextFromImage(
+          croppedImage.path,
+          onTextDetected,
+          Code,
+          CardCount,
+        );
+      }
+    }
   }
 
-  Future<File?> _cropImage(String imagePath) async {
+  Future<File?> _cropImage(
+    String imagePath,
+    String toolbarTitle,
+  ) async {
     CroppedFile? croppedFile = await ImageCropper().cropImage(
       sourcePath: imagePath,
       aspectRatio: const CropAspectRatio(ratioX: 6, ratioY: 1),
       uiSettings: [
         AndroidUiSettings(
-          toolbarTitle: 'Crop Number',
+          toolbarTitle: toolbarTitle,
           toolbarColor: btnColor,
           toolbarWidgetColor: Colors.white,
           aspectRatioPresets: [
@@ -57,6 +68,7 @@ class OCRService {
     String imagePath,
     Function(String) onTextDetected,
     String Code,
+    int CardCount,
   ) async {
     final inputImage = InputImage.fromFilePath(imagePath);
 
@@ -65,7 +77,10 @@ class OCRService {
         await textRecognizer.processImage(inputImage);
     String recognizedText = recognizedTextResult.text;
 
-    String cardNumber = _extractCardNumber(recognizedText, Code);
+    String cardNumber = _extractCardNumber(
+      recognizedText,
+      CardCount,
+    );
     onTextDetected(cardNumber);
 
     textRecognizer.close();
@@ -75,14 +90,24 @@ class OCRService {
 
   String _extractCardNumber(
     String text,
-    String Code,
+    int CardCount,
   ) {
     final RegExp regex;
-    if (Code == "*556*")
-      regex = RegExp(r'\b(?:\d{3}[- ]?){4}\d{3}\b');
-    else
+    if (CardCount == 16)
       regex = RegExp(r'\b(?:\d{4}[- ]?){3}\d{4}\b');
+    else if (CardCount == 15)
+      regex = RegExp(r'\b(?:\d{3}[- ]?){4}\d{3}\b');
+    else if (CardCount == 14)
+      regex = RegExp(r'\b(?:\d{4}[- ]?){3}\d{4}\b');
+    else if (CardCount == 13)
+      regex = RegExp(r'\b(?:\d{4}[- ]?){3}\d{4}\b');
+    else if (CardCount == 12)
+      regex = RegExp(r'\b(?:\d{4}[- ]?){3}\d{4}\b');
+    else {
+      return '';
+    }
     final Match? match = regex.firstMatch(text);
+
     return match?.group(0)?.replaceAll(RegExp(r'[- ]'), '') ?? '';
   }
 
